@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+    <Grid ColumnDefinitions="*,*,*,*"
+          RowDefinitions="Auto,*,*,*,*,*"
+          ColumnSpacing="5"
+          RowSpacing="5"
+          Margin="5"
+          Padding="5">
+
+        <!-- Display -->
+        <Entry x:Name="Display"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="4"
+               Keyboard="Numeric"
+               HorizontalTextAlignment="End"
+               Text="0" />
+
+        <!-- Row 1: CE, C, x², √ -->
+        <Button Text="CE"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="OnClearEntryPressed" />
+
+        <Button Text="C"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="OnClearAllPressed" />
+
+        <Button Text="x²"
+                Grid.Row="1"
+                Grid.Column="2"
+                Clicked="OnSquarePressed" />
+
+        <Button Text="√"
+                Grid.Row="1"
+                Grid.Column="3"
+                Clicked="OnSqrtPressed" />
+
+        <!-- Row 2: 7 8 9 / -->
+        <Button Text="7"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="8"
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="9"
+                Grid.Row="2"
+                Grid.Column="2"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="/"
+                Grid.Row="2"
+                Grid.Column="3"
+                Clicked="OnOperatorPressed" />
+
+        <!-- Row 3: 4 5 6 * -->
+        <Button Text="4"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="5"
+                Grid.Row="3"
+                Grid.Column="1"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="6"
+                Grid.Row="3"
+                Grid.Column="2"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="*"
+                Grid.Row="3"
+                Grid.Column="3"
+                Clicked="OnOperatorPressed" />
+
+        <!-- Row 4: 1 2 3 - -->
+        <Button Text="1"
+                Grid.Row="4"
+                Grid.Column="0"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="2"
+                Grid.Row="4"
+                Grid.Column="1"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="3"
+                Grid.Row="4"
+                Grid.Column="2"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="-"
+                Grid.Row="4"
+                Grid.Column="3"
+                Clicked="OnOperatorPressed" />
+
+        <!-- Row 5: 0 . = + -->
+        <Button Text="0"
+                Grid.Row="5"
+                Grid.Column="0"
+                Clicked="OnNumberPressed" />
+
+        <Button Text="."
+                Grid.Row="5"
+                Grid.Column="1"
+                Clicked="OnDecimalPointPressed" />
+
+        <Button Text="="
+                Grid.Row="5"
+                Grid.Column="2"
+                Clicked="OnOperatorPressed" />
+
+        <Button Text="+"
+                Grid.Row="5"
+                Grid.Column="3"
+                Clicked="OnOperatorPressed" />
+
+    </Grid>
+
+</ContentPage>
